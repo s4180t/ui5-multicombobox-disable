@@ -1,0 +1,7 @@
+{
+    "extends": "plugin:@sap-ux/eslint-plugin-fiori-tools/defaultJS",
+    "root": true,
+    "rules": {
+        "comma-dangle": "off"
+    }
+}

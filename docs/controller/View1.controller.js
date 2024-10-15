@@ -1,2 +1,2 @@
-sap.ui.define(["sap/ui/core/mvc/Controller"],function(e){"use strict";return e.extend("ui5multicomboboxdisable.controller.View1",{onInit:function(){this.getOwnerComponent().getModel().setProperty("/maxSelected",2)}})});
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(e){"use strict";return e.extend("ui5multicomboboxdisable.controller.View1",{onInit:function(){this.getOwnerComponent().getModel().setProperty("/maxSelected",2);this.getOwnerComponent().getModel().setProperty("/selectedKeys","1")}})});
 //# sourceMappingURL=View1.controller.js.map

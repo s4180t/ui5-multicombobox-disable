@@ -3,9 +3,9 @@
     xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m"
     xmlns:c="ui5multicomboboxdisable.control">
     <Page id="page" title="{i18n>title}" class="sapUiContentPadding">
-        <form:SimpleForm editable="true">
-            <Label text="MultiComboBox" />
-            <c:MultiComboBoxDisablable maxSelected="{/maxSelected}">
+        <form:SimpleForm editable="true" layout="ResponsiveGridLayout" emptySpanL="4">
+            <Label text="MultiComboBoxDisablable" />
+            <c:MultiComboBoxDisablable maxSelected="{/maxSelected}" selectedKeys="{/selectedKeys}">
                 <c:items>
                     <core:ListItem key="1" text="Item 1" />
                     <core:ListItem key="2" text="Item 2" />
@@ -15,7 +15,23 @@
                 </c:items>
             </c:MultiComboBoxDisablable>
             <Label text="MaxSelected" />
-            <StepInput value="{/maxSelected}" />
+            <StepInput value="{/maxSelected}">
+                <layoutData>
+                    <layout:GridData span="L2 M3 S12" />
+                </layoutData>
+            </StepInput>
+            <Label text="SelectedKeys" />
+            <Text text="{/selectedKeys}" />
+            <Label text="Standard" />
+            <MultiComboBox selectedKeys="{/selectedKeys}">
+                <items>
+                    <core:ListItem key="1" text="Item 1" />
+                    <core:ListItem key="2" text="Item 2" />
+                    <core:ListItem key="3" text="Item 3" />
+                    <core:ListItem key="4" text="Item 4" />
+                    <core:ListItem key="5" text="Item 5" />
+                </items>
+            </MultiComboBox>
         </form:SimpleForm>
     </Page>
 </mvc:View>

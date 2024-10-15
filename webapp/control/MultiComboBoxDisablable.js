@@ -37,7 +37,7 @@ sap.ui.define(
                     const index = this.getParent().getItems().indexOf(this);
                     const context = model.getContext(`/items/${index}`);
                     if (context.getObject() === undefined) {
-                        model.setProperty("", { selected: false }, context);
+                        model.setProperty("", { selected: checkBox.getSelected() }, context);
                     }
                     checkBox
                         .bindProperty("enabled", {
